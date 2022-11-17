@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Avenir Next;
@@ -28,7 +29,6 @@
 }
 
 .hero {
-  height: 50 rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -36,7 +36,11 @@
   background-size: cover;
   background-position: center;
 }
+.hero__background {
+  height: 200px;
+}
 .hero__title {
+  margin-left: 1rem;
   font-weight: 400;
   color: #FFFFFF;
 }
@@ -45,12 +49,35 @@
   display: flex;
   flex-direction: column;
   align-items: space-around;
-  gap: 1 rem;
   background-color: #e1e1e1;
 }
 .photo-gallery__image {
-  margin-top: 16px;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-bottom: 0;
+  margin: 0 16px;
+  padding: 16px 0;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #323232;
+  color: #FFFFFF;
+}
+.contact__title {
+  margin: 16px;
+}
+.contact__social {
+  display: flex;
+  gap: 2rem;
+  margin: 0 16px;
+}
+.contact__info-title {
+  margin: 16px;
+  font-weight: 400;
+}
+.contact__info-content {
+  margin: 16px;
+  font-size: 13px;
+  font-weight: 300;
 }/*# sourceMappingURL=bio.css.map */
