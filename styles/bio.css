@@ -35,6 +35,7 @@
   background-image: url("../Assets/Images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
+  opacity: 50%;
 }
 .hero__background {
   height: 200px;
