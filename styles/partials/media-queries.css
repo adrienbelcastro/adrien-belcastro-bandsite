@@ -1,0 +1,8 @@
+@media (min-width: 720px) {
+  .navbar {
+    flex-direction: row;
+  }
+  .photo-gallery {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=media-queries.css.map */
