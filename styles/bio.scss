@@ -37,6 +37,11 @@ $fontcolour1: #FFFFFF;
 
     }
 
+    &__links-content.active {
+        border-bottom: 3px solid white;
+        padding: 2px;
+    }
+
 }
 
 .hero {
@@ -47,17 +52,36 @@ $fontcolour1: #FFFFFF;
     background-image: url("../Assets/Images/hero-bio.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 50%;
+
+    
+  
 
     &__background {
         height: 200px;
+        width: 355px;
+
+        background-color: rgba($color: #323232, $alpha: 0.5);
     }
 
+        
+
     &__title {
+        position: absolute;
         margin-left: 1rem;
 
         font-weight: 400;
         color: $fontcolour1;
+        opacity: 100%;
+    }
+}
+
+.about-musician {
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+        background-size: cover;
+        background-position: center;
     }
 }
 

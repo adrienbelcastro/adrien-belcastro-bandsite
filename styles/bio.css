@@ -27,6 +27,10 @@
   color: #FFFFFF;
   list-style: none;
 }
+.navbar__links-content.active {
+  border-bottom: 3px solid white;
+  padding: 2px;
+}
 
 .hero {
   display: flex;
@@ -35,15 +39,27 @@
   background-image: url("../Assets/Images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 50%;
 }
 .hero__background {
   height: 200px;
+  width: 355px;
+  background-color: rgba(50, 50, 50, 0.5);
 }
 .hero__title {
+  position: absolute;
   margin-left: 1rem;
   font-weight: 400;
   color: #FFFFFF;
+  opacity: 100%;
+}
+
+.about-musician {
+  display: flex;
+  flex-direction: column;
+}
+.about-musician__image {
+  background-size: cover;
+  background-position: center;
 }
 
 .photo-gallery {
