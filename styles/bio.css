@@ -42,7 +42,7 @@
 }
 .hero__background {
   height: 200px;
-  width: 355px;
+  width: 100%;
   background-color: rgba(50, 50, 50, 0.5);
 }
 .hero__title {
@@ -97,4 +97,22 @@
   margin: 16px;
   font-size: 13px;
   font-weight: 300;
+}
+
+@media (min-width: 720px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: start;
+  }
+  .navbar__title {
+    margin-left: 3rem;
+  }
+  .navbar__links {
+    margin: 5rem;
+  }
+  .photo-gallery {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=bio.css.map */

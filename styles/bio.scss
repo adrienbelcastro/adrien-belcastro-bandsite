@@ -1,4 +1,4 @@
-@import 'media-queries';
+
 
 $backgroundcolor1: #323232;
 $fontcolour1: #FFFFFF;
@@ -60,7 +60,7 @@ $fontcolour1: #FFFFFF;
 
     &__background {
         height: 200px;
-        width: 355px;
+        width: 100%;
 
         background-color: rgba($color: #323232, $alpha: 0.5);
     }
@@ -141,3 +141,4 @@ $fontcolour1: #FFFFFF;
 }
 
 
+@import "partials/media-queries";
