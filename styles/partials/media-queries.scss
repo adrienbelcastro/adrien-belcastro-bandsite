@@ -1,4 +1,4 @@
-@media (min-width: 720px) {
+@media screen and (min-width: 720px) {
     .navbar {
         flex-direction: row;
         justify-content: start;
@@ -13,14 +13,26 @@
     }
 
     .hero {
+
+
+        &__title {
+            font-size: 36px;
+            font-weight: 700;
+        } 
     
     }
 
     .photo-gallery {
+        flex-wrap: wrap;
+
         flex-direction: row;
         justify-content: center;
         align-items: center;
 
+        &__image {
+            width: 25%;
+        }
+ 
     }
 
     .contact {
