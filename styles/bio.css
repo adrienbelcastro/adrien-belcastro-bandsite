@@ -48,7 +48,7 @@
 .hero__title {
   position: absolute;
   margin-left: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #FFFFFF;
   opacity: 100%;
 }
@@ -57,9 +57,31 @@
   display: flex;
   flex-direction: column;
 }
+.about-musician__title {
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  font-size: 25px;
+  font-weight: 600;
+}
 .about-musician__image {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   background-size: cover;
   background-position: center;
+}
+.about-musician__quote {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+.about-musician__content {
+  margin: 0.5rem 1rem;
+}
+.about-musician__content-title {
+  margin: 1rem;
 }
 
 .photo-gallery {

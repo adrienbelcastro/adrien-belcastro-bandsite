@@ -71,7 +71,7 @@ $fontcolour1: #FFFFFF;
         position: absolute;
         margin-left: 1rem;
 
-        font-weight: 400;
+        font-weight: 500;
         color: $fontcolour1;
         opacity: 100%;
     }
@@ -81,9 +81,37 @@ $fontcolour1: #FFFFFF;
     display: flex;
     flex-direction: column;
 
+    &__title {
+        margin-top: 1.25rem;
+        margin-left: 1rem;
+
+        font-size: 25px;
+        font-weight: 600;
+    }
+
     &__image {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
         background-size: cover;
         background-position: center;
+    }
+
+    &__quote {
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__content {
+        margin: 0.5rem 1rem;
+    }
+
+    &__content-title {
+        margin: 1rem;
     }
 }
 
