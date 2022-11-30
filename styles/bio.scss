@@ -1,4 +1,4 @@
-
+$tabletbreakpoint: 768px;
 
 $backgroundcolor1: #323232;
 $fontcolour1: #FFFFFF;
@@ -44,7 +44,20 @@ $fontcolour1: #FFFFFF;
         padding: 2px;
     }
 
-}
+    @media screen and (min-width: $tabletbreakpoint) {
+            flex-direction: row;
+            justify-content: start;
+            
+            &__title {
+                margin-left: 3rem;
+            }
+    
+            &__links {
+             margin: 5rem;
+            }
+    }
+    
+}    
 
 .hero {
     display: flex;
@@ -74,6 +87,20 @@ $fontcolour1: #FFFFFF;
         font-weight: 500;
         color: $fontcolour1;
         opacity: 100%;
+    }
+
+    @media screen and (min-width: $tabletbreakpoint) {
+       
+        &__background {
+            height: 25rem;
+
+        }
+
+        &__title {
+            font-size: 60px;
+            font-weight: 600;
+        } 
+    
     }
 }
 
@@ -113,6 +140,29 @@ $fontcolour1: #FFFFFF;
     &__content-title {
         margin: 1rem;
     }
+
+    @media screen and (min-width: $tabletbreakpoint) {
+       
+        &__image {
+            align-self: center;
+            width: 70%;
+            aspect-ratio: 16/9;
+        }
+
+        &__quote {
+            margin: 2rem;
+
+            font-size: 24px;
+
+        }
+
+        &__container {
+            display: flex;
+            
+            margin: 2rem 4rem;
+        }
+    }
+
 }
 
 .photo-gallery {
@@ -129,6 +179,18 @@ $fontcolour1: #FFFFFF;
         padding: 16px 0;
     }
 
+    @media screen and (min-width: $tabletbreakpoint) {
+        
+        flex-wrap: wrap;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        &__image {
+            width: 25%;
+        }
+    }
 }
 
 .contact {
@@ -143,6 +205,8 @@ $fontcolour1: #FFFFFF;
 
     &__title {
         margin: 16px;
+
+        font-size: 32px;
 
         
     }
@@ -166,7 +230,47 @@ $fontcolour1: #FFFFFF;
         font-size: 13px;
         font-weight: 300;
     }
+    @media screen and (min-width: $tabletbreakpoint) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        padding-left: 2rem;
+
+        &__social-watermark2 {
+            padding: 10rem;
+        }
+       
+
+        &__info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        &__info-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: baseline;
+            
+
+        }
+
+        &__info-title {
+            margin: 0;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        
+    }
+
 }
 
 
-@import "partials/media-queries";
+

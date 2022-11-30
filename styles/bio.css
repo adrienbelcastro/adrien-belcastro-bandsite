@@ -31,6 +31,18 @@
   border-bottom: 3px solid white;
   padding: 2px;
 }
+@media screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: start;
+  }
+  .navbar__title {
+    margin-left: 3rem;
+  }
+  .navbar__links {
+    margin: 5rem;
+  }
+}
 
 .hero {
   display: flex;
@@ -51,6 +63,15 @@
   font-weight: 500;
   color: #FFFFFF;
   opacity: 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero__background {
+    height: 25rem;
+  }
+  .hero__title {
+    font-size: 60px;
+    font-weight: 600;
+  }
 }
 
 .about-musician {
@@ -83,6 +104,21 @@
 .about-musician__content-title {
   margin: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .about-musician__image {
+    align-self: center;
+    width: 70%;
+    aspect-ratio: 16/9;
+  }
+  .about-musician__quote {
+    margin: 2rem;
+    font-size: 24px;
+  }
+  .about-musician__container {
+    display: flex;
+    margin: 2rem 4rem;
+  }
+}
 
 .photo-gallery {
   display: flex;
@@ -93,6 +129,17 @@
 .photo-gallery__image {
   margin: 0 16px;
   padding: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .photo-gallery__image {
+    width: 25%;
+  }
 }
 
 .contact {
@@ -105,6 +152,7 @@
 }
 .contact__title {
   margin: 16px;
+  font-size: 32px;
 }
 .contact__social {
   display: flex;
@@ -120,29 +168,33 @@
   font-size: 13px;
   font-weight: 300;
 }
-
-@media screen and (min-width: 720px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: start;
-  }
-  .navbar__title {
-    margin-left: 3rem;
-  }
-  .navbar__links {
-    margin: 5rem;
-  }
-  .hero__title {
-    font-size: 36px;
-    font-weight: 700;
-  }
-  .photo-gallery {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
     align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 2rem;
   }
-  .photo-gallery__image {
-    width: 25%;
+  .contact__social-watermark2 {
+    padding: 10rem;
+  }
+  .contact__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .contact__info-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .contact__info-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
   }
 }/*# sourceMappingURL=bio.css.map */
