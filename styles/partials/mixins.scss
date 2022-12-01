@@ -1,0 +1,18 @@
+@mixin flex1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex2 {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+@mixin bandsite {
+    
+    color: $fontcolour1;
+    font-weight: 300;
+    
+}
