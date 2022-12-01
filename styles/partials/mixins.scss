@@ -1,18 +1,53 @@
-@mixin flex1 {
+//Flex Properties//
+@mixin flexcolumn {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-@mixin flex2 {
+@mixin flexrow {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
     
 }
 
-@mixin bandsite {
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+//BANDSITE Styles//
+@mixin watermark {
     
     color: $fontcolour1;
     font-weight: 300;
     
+}
+
+//Text Styles//
+@mixin page {
+
+    font-size: 60px;
+    font-weight: 700;
+}
+
+@mixin section {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+@mixin subheader {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@mixin content {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@mixin buttons {
+    font-size: 12px;
+    font-weight: 700;
 }
