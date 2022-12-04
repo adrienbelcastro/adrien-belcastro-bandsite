@@ -9,9 +9,9 @@
 </head>
 <body>
     <nav class="navbar">
-        <h2 class="navbar__title">BANDSITE</h2>
+        <img class="navbar__logo" src="./Assets/Logo/Logo-bandsite.svg">
         <ul class="navbar__links">
-            <a href="#"><li class="navbar__links-content navbar__links-content.active">Biography</li></a>
+            <a href="#"><li class="navbar__links-content navbar__links-content-active">Biography</li></a>
             <a href="#"><li class="navbar__links-content">Shows</li></a>
         </ul>
     </nav>
@@ -24,7 +24,7 @@
         <h2 class="about-musician__title">About the Musicians</h2>
         <img class="about-musician__image" src="./Assets/Images/band.jpg">
         <h3 class="about-musician__quote">"We push each other to be the best. It's not uncommon for one of us to say'this needs to be better, back to the drawing board"</h3>
-        <h3 class="about-musician__quote">- Bryan Teddy, lead vocalist of The Bees Knees</h3>
+        <h3 class="about-musician__quote2">- Bryan Teddy, lead vocalist of The Bees Knees</h3>
         <h4 class="about-musician__content-title">The Bees Knees</h4>
         <div class="about-musician__container">
             <p class="about-musician__content">The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records.</p>
@@ -33,7 +33,7 @@
     </main>
     <section class="photo-gallery">
         <h3 class="photo-gallery__title">Photo Gallery</h3>
-        <div>
+        <div class="photo-gallery__container">
             <img class="photo-gallery__image" src="./Assets/Images/Photo-gallery-1.jpg" alt="concert photo">
             <img class="photo-gallery__image" src="./Assets/Images/Photo-gallery-2.jpg" alt="women at a concert">
             <img class="photo-gallery__image" src="./Assets/Images/Photo-gallery-3.jpg" alt="group at concert">
@@ -46,13 +46,15 @@
         </div>
     </section>
     <footer class="contact">
-        <h2 class="contact__title">Get in Touch</h2>
-        <div class="contact__social">
-            <img class="contact__social-images" src="./Assets/Icons/SVG/Icon-instagram.svg" alt="instagram logo">
-            <img class="contact__social-images" src="./Assets/Icons/SVG/Icon-facebook.svg" alt="instagram logo">
-            <img class="contact__social-images" src="./Assets/Icons/SVG/Icon-twitter.svg" alt="instagram logo">
+        <div contact__top>
+            <h2 class="contact__title">Get in Touch</h2>
+            <div class="contact__social">
+                <img class="contact__social-images" src="./Assets/Icons/SVG/Icon-instagram.svg" alt="instagram logo">
+                <img class="contact__social-images" src="./Assets/Icons/SVG/Icon-facebook.svg" alt="instagram logo">
+                <img class="contact__social-images" src="./Assets/Icons/SVG/Icon-twitter.svg" alt="instagram logo">
+            </div>
+            <img class="contact__social-watermark-top" src="./Assets/Logo/Logo-bandsite.svg">
         </div>
-        <h2 class="contact_social-watermark2">BANDSITE</h2>
             <article class="contact__info">
                 <div class="contact__info-container">
                     <h3 class="contact__info-title">Cam Adams
@@ -76,8 +78,10 @@
                     <p class="contact__info-content">cwhyte@archentertainment.com</p>
                 </div>
             </article>
-                <h2 class="navbar__title">BANDSITE</h2>
-                <p class="contact__info-content">Copyright The Bees Knees © 2021 All Rights Reserved</p>
+                <img class="contact__social-watermark-bottom" src="./Assets/Logo/Logo-bandsite.svg">
+                <div class="contact__copyright">
+                    <p class="contact__info-content">Copyright The Bees Knees © 2021 All Rights Reserved</p>
+                </div>
             </article>    
         </article>
     </footer>
