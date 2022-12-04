@@ -1,7 +1,9 @@
 $tabletbreakpoint: 768px;
+$desktopbreakpoint: 1280px;
 
-$backgroundcolor1: #323232;
-$fontcolour1: #FFFFFF;
+$bandsite-black: #323232;
+$silver:#e1e1e1;
+$white: #ffffff;
 
 * {
     box-sizing: border-box;
@@ -18,11 +20,13 @@ $fontcolour1: #FFFFFF;
     align-items: center;
     flex-direction: column;
 
-    background-color: $backgroundcolor1;
+    background-color: $bandsite-black;
     height: 5rem;
+    max-width: 100%;
+    margin: 0 auto;
 
     &__title  {
-        color: $fontcolour1;
+        color: $white;
         font-weight: 300;
     }
 
@@ -30,25 +34,28 @@ $fontcolour1: #FFFFFF;
         display: flex;
         justify-content: space-between;
         gap: 3rem;
+
+        
     }
    
     &__links-content {
         text-decoration: none;
-        color: $fontcolour1;
+        color: $white;
         list-style: none;
 
     }
 
-    &__links-content.active {
-        border-bottom: 3px solid white;
-        padding: 2px;
+    &__links-content-active {
+
+        border-bottom: solid white;
     }
+
 
     @media screen and (min-width: $tabletbreakpoint) {
             flex-direction: row;
             justify-content: start;
             
-            &__title {
+            &__logo {
                 margin-left: 3rem;
             }
     
@@ -68,14 +75,17 @@ $fontcolour1: #FFFFFF;
     background-size: cover;
     background-position: center;
 
+    max-width: 100%;
+
     
   
 
     &__background {
-        height: 200px;
+        height: 100%;
         width: 100%;
+        aspect-ratio: 16/9;
 
-        background-color: rgba($color: #323232, $alpha: 0.5);
+        background-color: rgba($color: #323232, $alpha: 0.4);
     }
 
         
@@ -85,14 +95,15 @@ $fontcolour1: #FFFFFF;
         margin-left: 1rem;
 
         font-weight: 500;
-        color: $fontcolour1;
+        color: $white;
         opacity: 100%;
     }
 
     @media screen and (min-width: $tabletbreakpoint) {
        
         &__background {
-            height: 25rem;
+            height: 100%;
+            aspect-ratio: 16/9;
 
         }
 
@@ -101,6 +112,11 @@ $fontcolour1: #FFFFFF;
             font-weight: 600;
         } 
     
+    }
+
+    @media screen and (min-width:$desktopbreakpoint) {
+
+        
     }
 }
 
@@ -112,7 +128,7 @@ $fontcolour1: #FFFFFF;
         margin-top: 1.25rem;
         margin-left: 1rem;
 
-        font-size: 25px;
+        font-size: 36px;
         font-weight: 600;
     }
 
@@ -130,7 +146,16 @@ $fontcolour1: #FFFFFF;
         margin-right: 1rem;
 
         font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__quote2 {
+        margin-top: 1rem;
+        margin-left: 1rem;
+
+        font-size: 14px;
         font-weight: 600;
+        
     }
 
     &__content {
@@ -139,27 +164,86 @@ $fontcolour1: #FFFFFF;
 
     &__content-title {
         margin: 1rem;
+
+        font-size: 24px;
+        font-weight: 600;
     }
 
     @media screen and (min-width: $tabletbreakpoint) {
-       
+        &__title {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
         &__image {
+            margin-top: 0;
+
             align-self: center;
-            width: 70%;
+            width: 80%;
             aspect-ratio: 16/9;
         }
 
         &__quote {
-            margin: 2rem;
+            margin-top: 2rem;
+            margin-left: 5rem;
+            margin-right: 5rem;
 
             font-size: 24px;
 
         }
 
+        &__quote2 {
+            margin-left: 5rem;
+            margin-bottom: 3rem;
+        }
+
+        &__content{
+            margin: 0rem 1rem;
+            margin-bottom: 2rem;
+        }
+
         &__container {
             display: flex;
             
-            margin: 2rem 4rem;
+            margin: 0 4rem;
+        }
+
+        &__content-title {
+            margin: 0;
+            margin-bottom: 1rem;
+            margin-left: 5rem;
+
+        }
+    }
+
+    @media screen and (min-width:$desktopbreakpoint) {
+        display: flex;
+
+        &__title {
+            margin-left: 8rem;
+            margin-bottom: 2rem;
+        }
+
+        &__image {
+            width: 70%;
+        }
+
+        &__quote {
+            width: 50%;
+            margin-left: 12rem;
+        }
+
+        &__quote2 {
+            margin-left: 12rem;
+        }
+
+        &__content-title {
+            margin-left: 12rem;
+        }
+
+        &__container {
+            width: 75%;
+            margin: 0 11rem;
         }
     }
 
@@ -172,11 +256,14 @@ $fontcolour1: #FFFFFF;
 
     background-color: #e1e1e1;
 
-
+    &__container {
+        display: flex;
+        flex-direction: column;
+        
+    }
 
     &__image {
-        margin: 0 16px;
-        padding: 16px 0;
+        margin: 1rem 1rem;
     }
 
     @media screen and (min-width: $tabletbreakpoint) {
@@ -184,11 +271,21 @@ $fontcolour1: #FFFFFF;
         flex-wrap: wrap;
 
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 1.5rem;
+            
+        }
 
         &__image {
-            width: 25%;
+            width: 27%;
         }
     }
 }
@@ -204,43 +301,69 @@ $fontcolour1: #FFFFFF;
     color: #FFFFFF;
 
     &__title {
-        margin: 16px;
+        margin: 1rem;
 
         font-size: 32px;
 
         
     }
 
+    &__social-watermark-bottom {
+        margin-top: 4rem;
+        margin-left: 1rem;
+    }
+
+    &__social-watermark-top {
+        display: none;
+    }
+   
+
     &__social {
         display: flex;
         gap: 2rem;
 
-        margin: 0 16px;
+        margin: 0 1rem;
     }
 
     &__info-title {
-        margin: 16px;
+        margin: 1rem;
 
         font-weight: 400;
     }
 
     &__info-content {
-        margin: 16px;
+        margin: 1rem;
 
-        font-size: 13px;
-        font-weight: 300;
+        font-size: 14px;
+        font-weight: 400;
     }
+
     @media screen and (min-width: $tabletbreakpoint) {
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: row;
         flex-wrap: wrap;
         
         padding-left: 2rem;
 
-        &__social-watermark2 {
-            padding: 10rem;
+        &__top {
+            display: flex;
+            align-items: center;
+
+            width: 100%;
+        }
+
+        &__title {
+            margin: 2rem 1rem;
+        }
+
+        &__social-watermark-bottom {
+            display: none;
+        }
+
+        &__social-watermark-top {
+            display: flex;
+            justify-content: flex-end;
+            width: 45%;
+            
         }
        
 
@@ -267,6 +390,17 @@ $fontcolour1: #FFFFFF;
             font-weight: 600;
         }
 
+        
+    }
+
+    @media screen and (min-width:$desktopbreakpoint) {
+
+        padding-left: 4rem;
+
+        &__social-watermark-top {
+
+            width: 60%;
+        }
         
     }
 
