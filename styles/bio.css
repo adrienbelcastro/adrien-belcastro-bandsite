@@ -35,7 +35,7 @@
   border-bottom: 2px solid transparent;
 }
 .navbar__links-content:hover, .navbar__links-content--active {
-  color: #e1e1e1;
+  color: red;
   border-bottom: 2px solid #ffffff;
 }
 .navbar__links-content a:link, .navbar__links-content a:visited {
@@ -157,7 +157,7 @@
   .about-musician__title {
     font-size: 36px;
     font-weight: 600;
-    margin-left: 3rem;
+    margin-left: 2rem;
     margin-bottom: 1.5rem;
     margin-top: 2rem;
   }
@@ -239,9 +239,11 @@
 }
 .photo-gallery__image {
   margin: 1rem 1rem;
+  transition: all 0.8s;
+  filter: grayscale(100%);
 }
 .photo-gallery__image:hover {
-  background-color: rgba(50, 50, 50, 0.4);
+  filter: none;
 }
 @media screen and (min-width: 768px) {
   .photo-gallery {
@@ -251,7 +253,7 @@
   .photo-gallery__title {
     font-size: 36px;
     font-weight: 600;
-    margin-left: 3rem;
+    margin-left: 2rem;
   }
   .photo-gallery__container {
     display: flex;

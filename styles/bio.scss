@@ -305,8 +305,11 @@
     &__image {
         margin: 1rem 1rem;
 
+        transition: all 0.8s;
+        filter: grayscale(100%);
+
             &:hover {
-                @include greyscale;
+                filter: none;
             }
     }
 
