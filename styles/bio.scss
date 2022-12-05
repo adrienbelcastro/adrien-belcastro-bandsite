@@ -54,9 +54,14 @@
 
     }
 
-    &__links-content-active {
+    &__links-content--active {
 
         border-bottom: solid white;
+    }
+
+    &__links--inactive {
+
+        color: $silver;
     }
 
 
