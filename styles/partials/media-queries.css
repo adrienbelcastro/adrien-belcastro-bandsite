@@ -9,9 +9,21 @@
   .navbar__links {
     margin: 5rem;
   }
+  .hero__background {
+    height: 25rem;
+  }
   .hero__title {
-    font-size: 36px;
-    font-weight: 700;
+    font-size: 60px;
+    font-weight: 600;
+  }
+  .about-musician__image {
+    justify-self: center;
+  }
+  .about-musician__quote {
+    font-size: 32px;
+  }
+  .about-musician__container {
+    display: flex;
   }
   .photo-gallery {
     flex-wrap: wrap;
