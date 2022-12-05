@@ -14,12 +14,16 @@
     @include flexcolumn;
 
     justify-content: space-evenly;
-    align-items: center;
     
 
     background-color: $bandsite-black;
     max-width: 100%;
     margin: 0 auto;
+
+    &__bandsite {
+        text-align: center;
+        padding-top: 1rem;
+    }
 
     &__title  {
         color: $white;
@@ -29,7 +33,6 @@
     &__links {
         display: flex;
         justify-content: space-between;
-        gap: 3rem;
         
     }
    
@@ -37,10 +40,16 @@
         text-decoration: none;
         color: $white;
         list-style: none;
+        width: 100%;
+        margin: 0 auto;
+        border-bottom: 2px solid transparent;
 
-            &:hover {
-                @include opacity;
-            }
+        &:hover, &--active {
+            @include opacity;
+            border-bottom: 2px solid white;
+        }
+
+
         @include active;
 
         @media screen and (max-width: 767px) {
@@ -54,14 +63,10 @@
 
     }
 
-    &__links-content--active {
-
-        border-bottom: solid white;
-    }
 
     &__links--inactive {
 
-        color: $silver;
+        color: #e1e1e1;
     }
 
 
@@ -71,13 +76,25 @@
     @media screen and (min-width: $tabletbreakpoint) {
             flex-direction: row;
             justify-content: start;
+            padding-top: 2rem;
+            gap: 3rem;
             
             &__logo {
                 margin-left: 3rem;
             }
     
             &__links {
-             margin: 5rem;
+                margin-left: 2rem;
+                gap: 3rem;
+            }
+
+            &__bandsite {
+
+                padding-top: 0rem;
+            }
+
+            &__links-content--active {
+                padding-bottom: 1.5rem;
             }
     }
     
@@ -342,6 +359,7 @@
         margin: 1rem;
 
         font-size: 32px;
+        font-weight: 500;
 
         
     }
