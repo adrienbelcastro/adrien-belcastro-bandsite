@@ -18,7 +18,6 @@
     
 
     background-color: $bandsite-black;
-    height: 5rem;
     max-width: 100%;
     margin: 0 auto;
 
@@ -31,11 +30,6 @@
         display: flex;
         justify-content: space-between;
         gap: 3rem;
-
-            &:hover {
-                @include opacity;
-            }
-
         
     }
    
@@ -44,12 +38,29 @@
         color: $white;
         list-style: none;
 
+            &:hover {
+                @include opacity;
+            }
+        @include active;
+
+        @media screen and (max-width: 767px) {
+
+            width: 50%;
+            text-align: center;
+            padding: .5rem 0;
+            
+            
+        }
+
     }
 
     &__links-content-active {
 
         border-bottom: solid white;
     }
+
+
+    
 
 
     @media screen and (min-width: $tabletbreakpoint) {
@@ -86,7 +97,7 @@
         width: 100%;
         aspect-ratio: 16/9;
 
-        background-color: rgba($color: #323232, $alpha: 0.4);
+        @include greyscale;
     }
 
         
@@ -271,9 +282,9 @@
     &__image {
         margin: 1rem 1rem;
 
-        &__image:hover {
-            @include opacity
-        }
+            &:hover {
+                @include greyscale;
+            }
     }
 
     @media screen and (min-width: $tabletbreakpoint) {
@@ -358,6 +369,8 @@
 
         font-size: 14px;
         font-weight: 400;
+        text-decoration: none;
+        color: #FFFFFF;
     }
 
     @media screen and (min-width: $tabletbreakpoint) {

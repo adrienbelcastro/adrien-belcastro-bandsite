@@ -13,16 +13,7 @@
 @mixin flexcenter {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-}
-
-//BANDSITE Styles//
-@mixin watermark {
-    
-    color: $fontcolour1;
-    font-weight: 300;
-    
+    align-items: center;   
 }
 
 //Text Styles//
@@ -50,4 +41,51 @@
 @mixin buttons {
     font-size: 12px;
     font-weight: 700;
+}
+
+//Title Styles//
+@mixin title-mobile {
+    font-size: 36px;
+    font-weight: 600;
+    
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+}
+
+@mixin title-tablet {
+    font-size: 36px;
+    font-weight: 600;
+
+    margin-left: 3rem;
+
+    
+}
+
+@mixin title-desktop {
+    font-size: 36px;
+    font-weight: 600;
+
+    margin-bottom: 2rem;
+}
+
+//Image Style//
+
+@mixin opacity {
+    color: red;
+}
+
+@mixin greyscale {
+    background-color: rgba($color: #323232, $alpha: 0.4);
+}
+
+//Navbar Styles//
+
+@mixin active {
+    a:link, a:visited {
+        text-decoration: none;
+        color: $white;
+    }
+    a:hover, a:active {
+        color: $white;
+    }
 }
