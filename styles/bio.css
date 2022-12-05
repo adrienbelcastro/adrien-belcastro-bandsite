@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: Avenir Next;
+  color: #323232;
 }
 
 .navbar {
@@ -35,7 +36,7 @@
 }
 .navbar__links-content:hover, .navbar__links-content--active {
   color: #e1e1e1;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #ffffff;
 }
 .navbar__links-content a:link, .navbar__links-content a:visited {
   text-decoration: none;
@@ -285,6 +286,7 @@
   margin: 1rem;
   font-size: 32px;
   font-weight: 500;
+  color: #ffffff;
 }
 .contact__social-watermark-bottom {
   margin-top: 4rem;
@@ -301,6 +303,7 @@
 .contact__info-title {
   margin: 1rem;
   font-weight: 400;
+  color: #ffffff;
 }
 .contact__info-content {
   margin: 1rem;
