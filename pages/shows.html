@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shows</title>
+    <link rel="stylesheet" href="../styles/shows.css">
     <link rel="stylesheet" href="../styles/bio.css">
+    <script src="../scripts/build-shows-pages.js" type="module"></script>
+    <title>Shows</title>
 </head>
 <body>
     <nav class="navbar">
@@ -13,9 +15,61 @@
             <a href="index.html"><img class="navbar__logo" src="../Assets/Logo/Logo-bandsite.svg" alt="BANDSITE"></a> 
         </div>
         <ul class="navbar__links">
-            <li class="navbar__links-content navbar__links-content--inactive"><a class="navbar__anchor" href="#">Biography</a></li>
-            <li class="navbar__links-content navbar__links-content--active"><a class="navbar__anchor" href="#">Shows</a></li>
+            <li class="navbar__links-content navbar__links-content--inactive"><a class="navbar__anchor" href="../index.html">Biography</a></li>
+            <li class="navbar__links-content navbar__links-content--active"><a class="navbar__anchor" href="./shows.html">Shows</a></li>
         </ul> 
-    </nav>   
+    </nav>
+    <section class="hero">
+        <div class="hero__background"></div>
+        <h1 class="hero__title">Queen of Yellow x For The Stings</h1>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1394627437&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/metroboomin" title="Metro Boomin" target="_blank" style="color: #cccccc; text-decoration: none;">Metro Boomin</a> · <a href="https://soundcloud.com/metroboomin/creepin" title="Metro Boomin, The Weeknd, 21 Savage - Creepin&#x27;" target="_blank" style="color: #cccccc; text-decoration: none;">Metro Boomin, The Weeknd, 21 Savage - Creepin&#x27;</a></div>
+    </section>
+
+    <section class="shows">
+        <h2 class="shows__title">Shows</h2>
+        <div class="shows__container">
+        </div>
+    </section>
+
+    <footer class="contact">
+        <div class="contact__top">
+            <h2 class="contact__title">Get in Touch</h2>
+            <div class="contact__social">
+                <img class="contact__social-images" src="../Assets/Icons/SVG/Icon-instagram.svg" alt="instagram logo">
+                <img class="contact__social-images" src="../Assets/Icons/SVG/Icon-facebook.svg" alt="instagram logo">
+                <img class="contact__social-images" src="../Assets/Icons/SVG/Icon-twitter.svg" alt="instagram logo">
+            </div>
+            <div class="contact__social-watermark-top">
+                <img  src="../Assets/Logo/Logo-bandsite.svg" alt="BANDSITE">
+            </div>
+        </div>
+            <article class="contact__info">
+                <div class="contact__info-container">
+                    <h3 class="contact__info-title">Cam Adams
+                        <br>The Bees Knees Management<br></h3>
+                    <p class="contact__info-content">503 Broadway Penthouse, 
+                        <br>New York, NY 10012, USA<br></p>
+                    <a class="contact__info-content" href="info@thebeesknees.com">info@thebeesknees.com</a>
+                </div>
+                <div class="contact__info-container">
+                    <h3 class="contact__info-title">Pearl Gregg
+                        <br>Limitless Artist Group<br></h3>
+                    <p class="contact__info-content">Booking Agent For
+                        <br>US / South America / Japan<br></p>
+                    <a class="contact__info-content" href="mailto:pearl.gregg@limitlesssag.com">pearl.gregg@limitlesssag.com</a>
+                </div>
+                <div class="contact__info-container">
+                    <h3 class="contact__info-title">Carson Whyte
+                        <br>ARCH Entertainment<br></h3>
+                    <p class="contact__info-content">Booking Agent for
+                        <br>UK / EU / AU<br></p>
+                    <a class="contact__info-content" href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a>
+                </div>
+            </article>
+                <img class="contact__social-watermark-bottom" src="../Assets/Logo/Logo-bandsite.svg" alt="BANDSITE">
+                <div class="contact__copyright">
+                    <p class="contact__info-content">Copyright The Bees Knees © 2021 All Rights Reserved</p>
+                </div>
+
 </body>
 </html>
