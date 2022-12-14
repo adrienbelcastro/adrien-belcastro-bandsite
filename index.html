@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bio.css">
+    <script src="./scripts/index-page.js" type="module"></script>
     <title>BandSite</title>
 </head>
 <body>
@@ -49,19 +50,23 @@
     </section>
     <section class="comment">
         <h2 class="comment__title">Join the Conversation</h2>
-        <img class="comment__image" src="./Assets/Images/Mohan-muruge.jpg" alt="Mohan Muruge">
-        <form class="comment__form" novalidate>
-            <!-- Name input-->
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+        <div class="comment__content">
+            <img class="comment__image" src="./Assets/Images/Mohan-muruge.jpg" alt="Mohan Muruge">
+            <form class="comment__form" novalidate>
+                <!-- Name input-->
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
-            <!--Comment input-->
-            <label for="comment">Comment</label>
-            <input type="text" name="comment" id="comment" placeholder="Add a new comment">
+                <!--Comment input-->
+                <label for="comment">Comment</label>
+                <input type="text" name="comment" id="comment" placeholder="Add a new comment">
 
-            <button type="comment" class="comment__form-button">COMMENT</button>
-        </form>
+                <button type="comment" class="comment__form-button">COMMENT</button>
+            </form>
+        </div>
+        <div class="comment__conversation">
 
+        </div>
     </section>
     <footer class="contact">
         <div class="contact__top">
