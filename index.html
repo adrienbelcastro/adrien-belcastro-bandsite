@@ -13,8 +13,8 @@
             <a href="index.html"><img class="navbar__logo" src="./Assets/Logo/Logo-bandsite.svg" alt="BANDSITE"></a> 
         </div>
         <ul class="navbar__links">
-            <li class="navbar__links-content navbar__links-content--active"><a class="navbar__anchor" href="#">Biography</a></li>
-            <li class="navbar__links-content navbar__links-content--inactive"><a class="navbar__anchor" href="#">Shows</a></li>
+            <li class="navbar__links-content navbar__links-content--active"><a class="navbar__anchor" href="./index.html">Biography</a></li>
+            <li class="navbar__links-content navbar__links-content--inactive"><a class="navbar__anchor" href="./pages/shows.html">Shows</a></li>
         </ul>
     </nav>
     <section class="hero">
@@ -46,6 +46,22 @@
             <img class="photo-gallery__image" src="./Assets/Images/Photo-gallery-8.jpg" alt="group at concert">
             <img class="photo-gallery__image" src="./Assets/Images/Photo-gallery-9.jpg" alt="group at concert">
         </div>
+    </section>
+    <section class="comment">
+        <h2 class="comment__title">Join the Conversation</h2>
+        <img class="comment__image" src="./Assets/Images/Mohan-muruge.jpg" alt="Mohan Muruge">
+        <form class="comment__form" novalidate>
+            <!-- Name input-->
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+            <!--Comment input-->
+            <label for="comment">Comment</label>
+            <input type="text" name="comment" id="comment" placeholder="Add a new comment">
+
+            <button type="comment" class="comment__form-button">COMMENT</button>
+        </form>
+
     </section>
     <footer class="contact">
         <div class="contact__top">

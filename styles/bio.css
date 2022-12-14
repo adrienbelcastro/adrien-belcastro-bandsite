@@ -276,6 +276,17 @@
   }
 }
 
+.comment__image {
+  height: 1rem;
+  width: 1rem;
+  border: 1px transparent;
+  border-radius: 50%;
+}
+.comment__form {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
