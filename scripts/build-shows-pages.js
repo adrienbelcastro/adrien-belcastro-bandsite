@@ -11,26 +11,36 @@ function createShows(shows) {
     const listEl = document.createElement('article');
     listEl.classList.add('shows__list');
 
-    const dateTitle = document.createElement('h3')
-    dateTitle.classList.add('shows__content--title');
+    const dateDiv = document.createElement('div')
+    dateDiv.classList.add('shows__content-container')
+    listEl.appendChild(dateDiv);
+
+    const dateTitle = document.createElement('h4')
+    dateTitle.classList.add('shows__content-date');
     dateTitle.innerText = 'Date';
-    listEl.appendChild(dateTitle);
 
     const dateEl = document.createElement('h3');
-    dateEl.innerText = shows.date;
     dateEl.classList.add('shows__date');
+    dateEl.innerText = shows.date;
 
-    const venueTitle = document.createElement('h3')
-    venueTitle.classList.add('shows__content--title');
+    const venueDiv = document.createElement('div')
+    venueDiv.classList.add('shows__content-container')
+    listEl.appendChild(venueDiv);
+
+    const venueTitle = document.createElement('h4')
+    venueTitle.classList.add('shows__content-venue');
     venueTitle.innerText = 'Venue';
-    listEl.appendChild(venueTitle);
 
     const venueEl = document.createElement('p');
     venueEl.classList.add('shows__content');
-    venueTitle.innerText = shows.venue;
+    venueEl.innerText = shows.venue;
 
+    const locationDiv = document.createElement('div')
+    locationDiv.classList.add('shows__content-container')
+    listEl.appendChild(locationDiv);
+    
     const locationTitle = document.createElement('h3')
-    locationTitle.classList.add('shows__content--title');
+    locationTitle.classList.add('shows__content-location');
     locationTitle.innerText = 'Location';
     listEl.appendChild(locationTitle);
 
@@ -38,9 +48,18 @@ function createShows(shows) {
     locationEl.classList.add('shows__content')
     locationEl.innerText = shows.location;
 
-    listEl.appendChild(dateEl);
-    listEl.appendChild(venueEl);
-    listEl.appendChild(locationEl);
+    const buttonEL = document.createElement('button')
+    buttonEL.classList.add('shows__button');
+    buttonEL.innerText = 'BUY TICKETS';
+    listEl.appendChild(buttonEL);
+
+
+    dateDiv.appendChild(dateTitle);
+    dateDiv.appendChild(dateEl);
+    venueDiv.appendChild(venueTitle);
+    venueDiv.appendChild(venueEl);
+    locationDiv.appendChild(locationTitle);
+    locationDiv.appendChild(locationEl);
 
     return listEl;
     
