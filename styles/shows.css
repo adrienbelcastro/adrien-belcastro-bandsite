@@ -1,1 +1,60 @@
-/*# sourceMappingURL=shows.css.map */
+.hero__shows {
+  background-image: url("../Assets/Images/Photo-gallery-3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero__shows-background {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: rgba(50, 50, 50, 0.4);
+}
+.hero__shows-album {
+  color: #ffffff;
+  padding: 1rem;
+}
+.hero__shows-title {
+  width: 80%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  color: #ffffff;
+}
+.hero__shows-soundcloud {
+  padding: 0 1rem;
+}
+
+.shows {
+  margin-bottom: 1rem;
+}
+.shows__title {
+  margin: 2rem 1rem;
+}
+.shows__list {
+  border-bottom: #e1e1e1 solid 1px;
+}
+.shows__content-container {
+  margin: 1rem;
+}
+.shows__content-date {
+  color: #e1e1e1;
+}
+.shows__date {
+  color: #323232;
+}
+.shows__content-venue {
+  margin: 1rem 0;
+  color: #e1e1e1;
+}
+.shows__content-location {
+  color: #e1e1e1;
+}
+.shows__button {
+  width: 90%;
+  height: 40px;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
+  background-color: #323232;
+  color: #ffffff;
+  border-radius: 4px;
+}/*# sourceMappingURL=shows.css.map */

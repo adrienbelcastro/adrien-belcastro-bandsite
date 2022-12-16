@@ -1,0 +1,85 @@
+@import "partials/mixins"; 
+@import "partials/variables.scss";
+
+.hero__shows {
+
+    @include heroimage (url("../Assets/Images/Photo-gallery-3.jpg"), cover, center);
+
+    &-background {
+        @include backgroundfilter;
+        @include greyscale;
+
+    }
+
+    &-album {
+        color: $white;
+
+        padding: 1rem;
+
+        
+    }
+
+    &-title {
+        width: 80%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+
+        color: $white;
+    }
+
+    &-soundcloud {
+        padding: 0 1rem;
+    }
+}
+
+.shows {
+
+    margin-bottom: 1rem;
+
+    &__title {
+        margin: 2rem 1rem;
+    }
+
+    &__list {
+        border-bottom: $mercury solid 1px;
+    }
+
+   
+
+    &__content-container{
+        margin: 1rem;
+    }
+
+    &__content-date {
+        color: $mercury;
+    }
+
+    &__date{
+        color: $bandsite-black;
+    }
+
+    &__content-venue {
+        margin: 1rem 0;
+
+        color: $mercury;
+    }
+
+    &__content-location {
+
+        color: $mercury;
+        
+    }
+
+    &__button {
+        width: 90%;
+        height: 40px;
+
+        margin: 0 1rem;
+        margin-bottom: 1rem;
+
+        background-color: $bandsite-black;
+        color: $white;
+        border-radius: 4px;
+    }
+}
