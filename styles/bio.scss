@@ -12,7 +12,7 @@
 
 
 .navbar {
-    @include flexcolumn;
+    @include flex(flex, column, none, none);
 
     justify-content: space-evenly;
     
@@ -102,13 +102,8 @@
 }    
 
 .hero {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    background-image: url("../Assets/Images/hero-bio.jpg");
-    background-size: cover;
-    background-position: center;
+    @include flex (flex, none, center, flex-start);
+    @include heroimage (url("../Assets/Images/hero-bio.jpg"), cover, center);
 
     max-width: 100%;
 
@@ -116,10 +111,7 @@
   
 
     &__background {
-        height: 100%;
-        width: 100%;
-        aspect-ratio: 16/9;
-
+        @include backgroundfilter;
         @include greyscale;
     }
 
@@ -159,7 +151,7 @@
 }
 
 .about-musician {
-    @include flexcolumn;
+    @include flex(flex, column, none, none);
 
     &__title {
        @include title-mobile
@@ -350,17 +342,32 @@
 }
 
 .comment {
+
+    &__content {
+        display: flex;
+        gap: 1rem;
+
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
     
     &__image {
-        height: 1rem;
-        width: 1rem;
-        border: 1px transparent;
+        height: 36px;
+        width: 36px;
         border-radius: 50%;
     }
 
     &__form{
         display: flex;
         flex-direction: column;
+        width: 100%;
+
+        margin-right: 1rem;
+    }
+
+    &__form-button {
+        margin: 1rem 0;
+        color: $bandsite-black;
     }
 }
 
