@@ -39,22 +39,24 @@ renderComments();
 function handleFormComment(event) {
     event.preventDefault();
 
-    if (event.target.agreement.checked === false) {
-        alert ('please fill out all empty fields.');
-        return;
-    }
+    // if (event.target.agreement.checked === false) {
+    //     alert ('please fill out all empty fields.');
+    //     return;
+    // }
+    const d = new Date()
 
     const cardData = {
-        name: event.target.fullName.value,
-        date: event.target.date.value,
+        name: event.target.name.value,
         comment: event.target.comment.value,
     };
 
     formEl.reset();
-    comments.push(cardData);
+    comments.unshift(cardData);
     renderComments();
 }
 
 const formEl = document.querySelector('.comment__form');
-formEl.addEventListener('comment', handleFormComment);
+formEl.addEventListener('submit', handleFormComment);
 renderComments();
+
+
