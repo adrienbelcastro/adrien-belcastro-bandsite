@@ -79,3 +79,17 @@
         color: $white;
     }
 }
+
+//Hero Mixins
+
+@mixin heroimage ($url, $size, $position) {
+    background-image: $url;
+    background-size: $size;
+    background-position: $position;
+}
+
+@mixin backgroundfilter {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
