@@ -16,7 +16,7 @@ function createShows(shows) {
     listEl.appendChild(dateDiv);
 
     const dateTitle = document.createElement('h4')
-    dateTitle.classList.add('shows__content-date');
+    dateTitle.classList.add('shows__content-subhead');
     dateTitle.innerText = 'Date';
 
     const dateEl = document.createElement('h3');
@@ -28,7 +28,7 @@ function createShows(shows) {
     listEl.appendChild(venueDiv);
 
     const venueTitle = document.createElement('h4')
-    venueTitle.classList.add('shows__content-venue');
+    venueTitle.classList.add('shows__content-subhead');
     venueTitle.innerText = 'Venue';
 
     const venueEl = document.createElement('p');
@@ -39,8 +39,8 @@ function createShows(shows) {
     locationDiv.classList.add('shows__content-container')
     listEl.appendChild(locationDiv);
     
-    const locationTitle = document.createElement('h3')
-    locationTitle.classList.add('shows__content-location');
+    const locationTitle = document.createElement('h4')
+    locationTitle.classList.add('shows__content-subhead');
     locationTitle.innerText = 'Location';
     listEl.appendChild(locationTitle);
 
@@ -64,7 +64,6 @@ function createShows(shows) {
     return listEl;
     
 }
-
 
 function renderShows() {
     const showsEl = document.querySelector(".shows__container");
