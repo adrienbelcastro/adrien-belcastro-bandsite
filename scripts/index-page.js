@@ -8,6 +8,19 @@ const comments = [
 function createComments (comments) {
     const commentEl = document.createElement('article');
     commentEl.classList.add('comment__posted');
+    
+    const commentContainer = document.createElement('div');
+    commentContainer.classList.add('comment__container')
+
+    const avatarContainer = document.createElement('div');
+    avatarContainer.classList.add('comment__avatar-container');
+
+    const innerContainer = document.createElement('div');
+    innerContainer.classList.add('comment__inner-container')
+
+    const avatarEl = document.createElement('div');
+    avatarEl.classList.add('comment__avatar');
+    avatarContainer.appendChild(avatarEl);
 
     const heading = document.createElement('h3');
     heading.innerText = comments.name;
@@ -18,7 +31,9 @@ function createComments (comments) {
     const contentEl = document.createElement('p');
     contentEl.innerText = comments.comment;
 
-    commentEl.append (heading, dateEl, contentEl);
+    innerContainer.append(heading, dateEl);  
+    commentContainer.append(innerContainer, contentEl)
+    commentEl.append (avatarContainer, commentContainer);
 
     return commentEl;
 }
@@ -43,10 +58,13 @@ function handleFormComment(event) {
     //     alert ('please fill out all empty fields.');
     //     return;
     // }
-    const d = new Date()
+
+    
+    const currentDate = new Date();
 
     const cardData = {
         name: event.target.name.value,
+        date:`${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`,
         comment: event.target.comment.value,
     };
 
@@ -58,5 +76,4 @@ function handleFormComment(event) {
 const formEl = document.querySelector('.comment__form');
 formEl.addEventListener('submit', handleFormComment);
 renderComments();
-
 
