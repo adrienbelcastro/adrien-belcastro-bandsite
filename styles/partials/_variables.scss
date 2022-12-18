@@ -4,8 +4,39 @@ $desktopbreakpoint: 1280px;
 
 //Color Variables//
 $bandsite-black: #323232;
+$bandsite-DarkBlack: #000000;
 $silver:#afafaf;
 $white: #ffffff;
 $alabaster: #fafafa;
 $mercury: #e1e1e1;
+
+//Fonts
+$font-main:'AvenirNextRegular';
+$font-bold:'AvenirNextBold';
+$font-demi:'AvenirNextDemi';
+
+@font-face {
+    font-family:'AvenirNextRegular';
+    src: url('../../Assets/Font/AvenirNextLTPro-Regular.otf') format('opentype'),
+        url('../../Assets/Font/Alternative\ files/AvenirNextLTPro.ttf') format('truetype');
+
+    font-weight: 400;
+}
+
+@font-face {
+    font-family:'AvenirNextBold';
+    src: url('../../Assets/Font/AvenirNextLTPro-Bold.otf') format('opentype'),
+    url('../../Assets/Font/Alternative\ files/AvenirNextLTProBold.ttf') format('truetype'); 
+
+    font-weight: 700;
+}
+
+@font-face {
+    font-family:'AvenirNextDemi';
+    src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf") format('opentype'),
+    url('../../Assets/Font/Alternative\ files/AvenirNextLTProDemi.ttf') format('truetype');
+
+    font-weight: 600;
+}
+
 
