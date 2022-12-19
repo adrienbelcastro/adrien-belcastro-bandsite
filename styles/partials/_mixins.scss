@@ -37,25 +37,17 @@
 @mixin title-mobile {
     font-size: 36px;
     font-weight: 600;
-    
-    margin-top: 1.25rem;
-    margin-left: 1rem;
+
 }
 
 @mixin title-tablet {
     font-size: 36px;
     font-weight: 600;
-
-    margin-left: 2rem;
-
-    
 }
 
 @mixin title-desktop {
     font-size: 36px;
     font-weight: 600;
-
-    margin-bottom: 2rem;
 }
 
 //Image Style//
@@ -65,7 +57,7 @@
 }
 
 @mixin greyscale {
-    background-color: rgba($color: #323232, $alpha: 0.4);
+    background-color: rgba($color: #323232, $alpha: 0.5);
 }
 
 //Navbar Styles//
@@ -80,7 +72,28 @@
     }
 }
 
-//Hero Mixins
+//Button Styles//
+
+@mixin button {
+
+    height: 40px;
+    
+    background-color: $bandsite-black;
+    color: $white;
+    border-radius: 4px;
+}
+
+//Form Styles
+
+@mixin form  {
+    padding: 12px;
+    
+    background-color: $mercury;
+    border: $silver 1px solid;
+    border-radius: 4px
+}
+
+//Hero Mixins//
 
 @mixin heroimage ($url, $size, $position) {
     background-image: $url;
@@ -92,4 +105,18 @@
     height: 100%;
     width: 100%;
     aspect-ratio: 16/9;
+}
+
+//Media Queries//
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {@content;}  
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1280px) {@content;}
+}
+
+@mixin header {
+    @media screen and (max-width: 767px) {@content;}
 }
