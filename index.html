@@ -50,22 +50,24 @@
     </section>
     <section class="comment">
         <h2 class="comment__title">Join the Conversation</h2>
-        <div class="comment__content">
-            <div>
-                <img class="comment__image" src="./Assets/Images/Mohan-muruge.jpg" alt="Mohan Muruge">
+        <div class="comment__flexcontainer">
+            <div class="comment__content">
+                <div>
+                    <img class="comment__image" src="./Assets/Images/Mohan-muruge.jpg" alt="Mohan Muruge">
+                </div>
+                <form class="comment__form">
+                    <!-- Name input-->
+                    <label for="name" class="comment__form-label">Name</label>
+                    <input type="text" name="names" class="comment__form-name" placeholder="Enter your name" required>
+
+
+                    <!--Comment input-->
+                    <label for="comment" class="comment__form-label">Comment</label>
+                    <textarea name="comment" maxlength="200" class="comment__form-comment" placeholder ="Add a new comment" required></textarea>
+                    
+                    <button type="comment" class="comment__form-button">COMMENT</button>
+                </form>
             </div>
-            <form class="comment__form" novalidate>
-                <!-- Name input-->
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Enter your name" required>
-
-
-                <!--Comment input-->
-                <label for="comment">Comment</label>
-                <textarea name="comment" id="comment" required></textarea>
-
-                <button type="comment" class="comment__form-button">COMMENT</button>
-            </form>
         </div>
         <div class="comment__conversation">
 
