@@ -23,12 +23,15 @@ function createComments (comments) {
     avatarContainer.appendChild(avatarEl);
 
     const heading = document.createElement('h3');
+    heading.classList.add('comment__name')
     heading.innerText = comments.name;
 
     const dateEl = document.createElement('p')
+    dateEl.classList.add('comment__para')
     dateEl.innerText = comments.date;
 
     const contentEl = document.createElement('p');
+    contentEl.classList.add('comment__para')
     contentEl.innerText = comments.comment;
 
     innerContainer.append(heading, dateEl);  
@@ -51,29 +54,47 @@ function renderComments() {
 renderComments();
 
 
+
+let nameField = document.querySelector(".comment__form-name");
+let commentField = document.querySelector(".comment__form-comment");
+
+
 function handleFormComment(event) {
-    event.preventDefault();
-
-    // if (event.target.agreement.checked === false) {
-    //     alert ('please fill out all empty fields.');
-    //     return;
-    // }
-
-    
     const currentDate = new Date();
 
-    const cardData = {
-        name: event.target.name.value,
-        date:`${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`,
-        comment: event.target.comment.value,
-    };
+    let name = event.target.names.value;
+    let comment = event.target.comment.value;
 
+    if (name.length >= 3 && comment.length >= 3) {
+        
+        const cardData = {
+            name: name,
+            date:`${currentDate.getSeconds()}`+ " " +"Seconds Ago",
+            // date:`${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`,
+            comment: comment,
+        };
+
+        comments.unshift(cardData);
+        nameField.classList.remove(".comment__form-name--invalid")
+        commentField.classList.remove(".comment__form-comment--invalid")
+        renderComments();
+
+    } else {
+        nameField.classList.add(".comment__form-name--invalid")
+        commentField.classList.add(".comment__form-comment--invalid")
+        alert("Invalid form values")
+
+        
+    }
+
+    event.preventDefault();
     formEl.reset();
-    comments.unshift(cardData);
-    renderComments();
 }
+
+
 
 const formEl = document.querySelector('.comment__form');
 formEl.addEventListener('submit', handleFormComment);
 renderComments();
+
 
