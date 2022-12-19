@@ -75,10 +75,15 @@ function renderShows() {
         showsEl.appendChild(card);
     }
 
-
-
 }
 
 
-
 renderShows();
+
+let selectedState = document.querySelectorAll('.shows__list');
+
+selectedState.forEach(show => {
+    show.addEventListener("click", event => {
+        show.classList.toggle("shows__list--selected")
+    })
+})
