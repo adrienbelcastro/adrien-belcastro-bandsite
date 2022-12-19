@@ -15,28 +15,5 @@ $font-main:'AvenirNextRegular';
 $font-bold:'AvenirNextBold';
 $font-demi:'AvenirNextDemi';
 
-@font-face {
-    font-family:'AvenirNextRegular';
-    src: url('../../Assets/Font/AvenirNextLTPro-Regular.otf') format('opentype'),
-        url('../../Assets/Font/Alternative\ files/AvenirNextLTPro.ttf') format('truetype');
-
-    font-weight: 400;
-}
-
-@font-face {
-    font-family:'AvenirNextBold';
-    src: url('../../Assets/Font/AvenirNextLTPro-Bold.otf') format('opentype'),
-    url('../../Assets/Font/Alternative\ files/AvenirNextLTProBold.ttf') format('truetype'); 
-
-    font-weight: 700;
-}
-
-@font-face {
-    font-family:'AvenirNextDemi';
-    src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf") format('opentype'),
-    url('../../Assets/Font/Alternative\ files/AvenirNextLTProDemi.ttf') format('truetype');
-
-    font-weight: 600;
-}
 
 
