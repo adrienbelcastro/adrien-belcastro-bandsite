@@ -1,5 +1,10 @@
 @import "partials/mixins"; 
 @import "partials/variables.scss";
+@import url("../styles/partials/_font.scss");
+
+body{
+    font-family: 'Avenir Next';
+}
 
 .hero__shows {
 
@@ -12,16 +17,23 @@
     }
 
     &-album {
+        @include title-mobile;
+        font-size: 14px;
+
         color: $white;
 
         padding: 1rem;
+        padding-top: 2rem
 
         
     }
 
     &-title {
+        @include title-mobile;
+        font-size: 24px;
+
         width: 80%;
-        padding-top: 1rem;
+
         padding-bottom: 1rem;
         padding-left: 1rem;
 
@@ -31,44 +43,88 @@
     &-soundcloud {
         padding: 0 1rem;
     }
+
+    @include tablet {
+
+        &-album {
+            font-size: 36px;
+
+            padding-left: 3rem;
+        }
+
+        &-title {
+    
+            width: 80%;
+
+            padding-left: 3rem;
+
+            font-size: 60px;
+        }
+
+        &-soundcloud {
+            width: 70%;
+
+            padding-left: 3rem;
+        }
+        @include desktop {
+            
+            &-background {
+                @include flex(flex, none, center, none);
+            }  
+            
+            &-album {
+                padding-left: 6rem;
+            }
+
+            &-title {
+                width: 90%;
+                padding-left: 6rem;
+                padding-bottom: 6rem;
+
+            }
+
+            &-soundcloud {
+                padding-right: 6rem;
+            }
+        }
+    }
 }
 
 .shows {
 
-    margin-bottom: 1rem;
-
     &__title {
-        margin: 2rem 1rem;
+        margin: 1.5rem 1rem;
+
+        font: 24px;
     }
 
     &__list {
         border-bottom: $mercury solid 1px;
-    }
 
-   
+        &:hover {
+            background-color: $alabaster;
+        }
+
+        &--selected {
+            background-color: $silver;
+        }
+    }
 
     &__content-container{
         margin: 1rem;
     }
 
-    &__content-date {
+    &__content-subhead {
+        padding-bottom: 0.5rem;
+
         color: $mercury;
+        font-weight: 400;
     }
 
     &__date{
         color: $bandsite-black;
-    }
-
-    &__content-venue {
-        margin: 1rem 0;
-
-        color: $mercury;
-    }
-
-    &__content-location {
-
-        color: $mercury;
-        
+        font-size: 14px;
+        font-weight: 600;
     }
 
     &__button {
@@ -78,8 +134,67 @@
         margin: 0 1rem;
         margin-bottom: 1rem;
 
-        background-color: $bandsite-black;
-        color: $white;
-        border-radius: 4px;
+        @include button
     }
+
+    @include tablet {
+
+        &__title {
+        }
+
+        &__list {
+            @include flex (flex, none, center, space-evenly);
+
+            &:not(:first-child) {
+                & > div > h4 {
+                    display: none; 
+                }  
+            } 
+        }
+
+        &__button {
+            width: 150px;
+            margin: 0;
+        }
+        
+        &__content-container {
+           width: 25%; 
+           padding: 0 1rem;
+                  
+        }
+        &__content-subhead {
+            margin-top: -2rem;
+            margin-bottom: 1rem;
+        }
+
+        }
+
+        @include desktop {
+            @include flex(flex, none, none, space-around);
+
+            padding: 1rem 2rem;
+
+            &__title {
+                margin: 1.5rem 1rem;
+            }
+
+            &__container {
+                width:70%;
+                padding-top: 3.2rem;
+            }
+
+            &__list {
+               
+            }
+
+            &__content-subhead {
+                margin-top: -2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            &__button {
+                margin: 0.5rem 0;
+            }
+        }
+
 }
