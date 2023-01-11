@@ -1,4 +1,8 @@
 function createComment(comment) {
+  const timeStamp = comment.timestamp;
+  const date = new Date(timeStamp);
+  const dateFormat = date.toDateString();
+
   const commentEl = document.createElement("article");
   commentEl.classList.add("comment__posted");
 
@@ -22,7 +26,7 @@ function createComment(comment) {
 
   const dateEl = document.createElement("p");
   dateEl.classList.add("comment__para");
-  dateEl.innerText = comment.timestamp;
+  dateEl.innerText = dateFormat;
 
   const contentEl = document.createElement("p");
   contentEl.classList.add("comment__para");
@@ -51,7 +55,6 @@ let commentField = document.querySelector(".comment__form-comment");
 
 function handleFormComment(event) {
   const currentDate = comment.timestamp();
-  console.log(currentDate);
 
   let name = event.target.name.value;
   let comment = event.target.comment.value;
