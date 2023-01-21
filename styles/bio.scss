@@ -444,9 +444,17 @@
     font-size: 13px;
   }
 
+  &__btn-container {
+    @include flex(flex, none, none, flex-end);
+    gap: 1rem;
+  }
+
   &__like-button {
-    width: 25px;
-    height: 25px;
+    @include like-delete-button;
+  }
+
+  &__delete-button {
+    @include like-delete-button;
   }
 
   @include tablet {

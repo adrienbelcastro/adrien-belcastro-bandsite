@@ -41,11 +41,13 @@
   color: red;
   border-bottom: 2px solid #ffffff;
 }
-.navbar__links-content a:link, .navbar__links-content a:visited {
+.navbar__links-content a:link,
+.navbar__links-content a:visited {
   text-decoration: none;
   color: #ffffff;
 }
-.navbar__links-content a:hover, .navbar__links-content a:active {
+.navbar__links-content a:hover,
+.navbar__links-content a:active {
   color: #ffffff;
 }
 @media screen and (max-width: 767px) {
@@ -403,9 +405,20 @@
   word-break: break-word;
   font-size: 13px;
 }
+.comment__btn-container {
+  display: flex;
+  flex-direction: none;
+  align-items: none;
+  justify-content: flex-end;
+  gap: 1rem;
+}
 .comment__like-button {
-  width: 25px;
-  height: 25px;
+  border: 0;
+  background-color: white;
+}
+.comment__delete-button {
+  border: 0;
+  background-color: white;
 }
 @media screen and (min-width: 768px) {
   .comment__title {
