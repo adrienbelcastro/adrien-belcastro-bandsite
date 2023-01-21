@@ -1,122 +1,134 @@
 //Flex Properties//
-@mixin flex ($display, $flexdirection, $alignitems, $justifycontent) {
-    display: $display;
-    flex-direction: $flexdirection;
-    align-items: $alignitems;
-    justify-content: $justifycontent;
+@mixin flex($display, $flexdirection, $alignitems, $justifycontent) {
+  display: $display;
+  flex-direction: $flexdirection;
+  align-items: $alignitems;
+  justify-content: $justifycontent;
 }
 
 //Text Styles//
 @mixin page {
-
-    font-size: 60px;
-    font-weight: 700;
+  font-size: 60px;
+  font-weight: 700;
 }
 
 @mixin section {
-    font-size: 36px;
-    font-weight: 700;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 @mixin subheader {
-    font-size: 24px;
-    font-weight: 600;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 @mixin content {
-    font-size: 14px;
-    font-weight: 400;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 @mixin buttons {
-    font-size: 12px;
-    font-weight: 700;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 //Title Styles//
 @mixin title-mobile {
-    font-size: 36px;
-    font-weight: 600;
-
+  font-size: 36px;
+  font-weight: 600;
 }
 
 @mixin title-tablet {
-    font-size: 36px;
-    font-weight: 600;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 @mixin title-desktop {
-    font-size: 36px;
-    font-weight: 600;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 //Image Style//
 
 @mixin opacity {
-    color: red;
+  color: red;
 }
 
 @mixin greyscale {
-    background-color: rgba($color: #323232, $alpha: 0.5);
+  background-color: rgba($color: #323232, $alpha: 0.5);
 }
 
 //Navbar Styles//
 
 @mixin active {
-    a:link, a:visited {
-        text-decoration: none;
-        color: $white;
-    }
-    a:hover, a:active {
-        color: $white;
-    }
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: $white;
+  }
+  a:hover,
+  a:active {
+    color: $white;
+  }
 }
 
 //Button Styles//
 
 @mixin button {
+  height: 40px;
 
-    height: 40px;
-    
-    background-color: $bandsite-black;
-    color: $white;
-    border-radius: 4px;
+  background-color: $bandsite-black;
+  color: $white;
+  border-radius: 4px;
 }
 
 //Form Styles
 
-@mixin form  {
-    padding: 12px;
-    
-    background-color: $mercury;
-    border: $silver 1px solid;
-    border-radius: 4px
+@mixin form {
+  padding: 12px;
+
+  background-color: $mercury;
+  border: $silver 1px solid;
+  border-radius: 4px;
 }
 
 //Hero Mixins//
 
-@mixin heroimage ($url, $size, $position) {
-    background-image: $url;
-    background-size: $size;
-    background-position: $position;
+@mixin heroimage($url, $size, $position) {
+  background-image: $url;
+  background-size: $size;
+  background-position: $position;
 }
 
 @mixin backgroundfilter {
-    height: 100%;
-    width: 100%;
-    aspect-ratio: 16/9;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 
 //Media Queries//
 
 @mixin tablet {
-    @media screen and (min-width: 768px) {@content;}  
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media screen and (min-width: 1280px) {@content;}
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
 }
 
 @mixin header {
-    @media screen and (max-width: 767px) {@content;}
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+//Like and Delete Button//
+
+@mixin like-delete-button {
+  border: 0;
+  background-color: white;
 }
