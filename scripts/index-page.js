@@ -1,7 +1,7 @@
 function createComment(comment) {
   const timeStamp = comment.timestamp;
   const date = new Date(timeStamp);
-  const dateFormat = date.toDateString();
+  const dateFormat = date.toLocaleDateString();
 
   const commentEl = document.createElement("article");
   commentEl.classList.add("comment__posted");
@@ -14,6 +14,9 @@ function createComment(comment) {
 
   const innerContainer = document.createElement("div");
   innerContainer.classList.add("comment__inner-container");
+
+  const btnContainer = document.createElement("div");
+  btnContainer.classList.add("comment__btn-container");
 
   const avatarEl = document.createElement("div");
   avatarEl.classList.add("comment__avatar");
@@ -31,12 +34,27 @@ function createComment(comment) {
   contentEl.classList.add("comment__para");
   contentEl.innerHTML = comment.comment;
 
+  const likeButton = document.createElement("button");
+  likeButton.classList.add("comment__like-button");
+  likeButton.innerText = `❤️ ${comment.likes}`;
+  likeButton.setAttribute("id", comment.id);
+  likeButton.addEventListener("click", handleLikes);
+
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("comment__delete-button");
+  deleteButton.innerText = "🗑";
+  deleteButton.setAttribute("id", comment.id);
+  deleteButton.addEventListener("click", handleDelete);
+
   innerContainer.append(heading, dateEl);
-  commentContainer.append(innerContainer, contentEl);
+  commentContainer.append(innerContainer, contentEl, btnContainer);
   commentEl.append(avatarContainer, commentContainer);
+  btnContainer.append(likeButton, deleteButton);
 
   return commentEl;
 }
+
+let commentsArray = [];
 
 function renderComments(result) {
   const myCommentsEl = document.querySelector(".comment__conversation");
@@ -45,27 +63,39 @@ function renderComments(result) {
   for (let i = 0; i < result.data.length; i++) {
     const card = createComment(result.data[i]);
     myCommentsEl.append(card);
+
+    commentsArray.push(myCommentsEl);
   }
 }
 let nameField = document.querySelector(".comment__form-name");
 let commentField = document.querySelector(".comment__form-comment");
 
+const getComments = () => {
+  axios
+    .get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
+    .then((result) => {
+      console.log("success");
+      console.log(result);
+
+      result.data.sort(function (a, b) {
+        return b.timestamp - a.timestamp;
+      });
+      console.log(result.data);
+      renderComments(result);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
+getComments();
+
 function handleFormComment(event) {
   event.preventDefault();
-  const currentDate = new Date();
 
   let name = event.target.names.value;
   let comment = event.target.comment.value;
 
-  if (name.length >= 3 && comment.length >= 3) {
-    nameField.classList.remove(".comment__form-name--invalid");
-    commentField.classList.remove(".comment__form-comment--invalid");
-    renderComments();
-  } else {
-    nameField.classList.add(".comment__form-name--invalid");
-    commentField.classList.add(".comment__form-comment--invalid");
-    alert("Invalid form values");
-  }
   const postComments = axios
     .post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`, {
       name: name,
@@ -73,26 +103,62 @@ function handleFormComment(event) {
     })
     .then((result) => {
       console.log(result);
+
+      getComments();
     })
     .catch((error) => {
       console.error(error);
     });
+
+  if (name.length >= 3 && comment.length >= 3) {
+    // nameField.classList.remove(".comment__form-name--invalid");
+    // commentField.classList.remove(".comment__form-comment--invalid");
+    // renderComments();
+    // } else {
+    //   nameField.classList.add(".comment__form-name--invalid");
+    //   commentField.classList.add(".comment__form-comment--invalid");
+    //   alert("Invalid form values");
+  }
+
   formEl.reset();
 }
 
-const getComments = axios
-  .get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
-  .then((result) => {
-    console.log("success");
-    console.log(result);
+let handleLikes = (event) => {
+  // event.preventDefault();
+  let likeID = event.target.id;
+  console.log(likeID);
 
-    Array.prototype.reverse.call(result.data);
+  const getLikes = axios
+    .put(
+      `https://project-1-api.herokuapp.com/comments/${likeID}/like?api_key=${apiKey}`
+    )
+    .then((result) => {
+      console.log("success");
+      console.log(result);
 
-    renderComments(result);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+      getComments();
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+let handleDelete = (event) => {
+  let likeID = event.target.id;
+
+  const deleteComments = axios
+    .delete(
+      `https://project-1-api.herokuapp.com/comments/${likeID}/?api_key=${apiKey}`
+    )
+    .then((result) => {
+      console.log("success");
+      console.log(result);
+
+      getComments();
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
 
 const formEl = document.querySelector(".comment__form");
 formEl.addEventListener("submit", handleFormComment);
