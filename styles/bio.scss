@@ -1,5 +1,8 @@
+// @use "./partials/mixins.scss" was not loading in mixin, documentation said @use only supported in dart sass.
+// See submit comment for link to documentation *;
 @import "partials/mixins";
-@import "partials/variables.scss";
+@import "partials/variables";
+@import "partials/font";
 
 * {
   box-sizing: border-box;
@@ -7,7 +10,7 @@
   padding: 0;
 
   color: $bandsite-black;
-  font-family: "Avenir Next";
+  font-family: "Avenir Next Regular";
 }
 
 .navbar {
@@ -24,7 +27,6 @@
 
   &__title {
     color: $white;
-    font-weight: 300;
   }
 
   &__links {
@@ -104,7 +106,7 @@
     position: absolute;
     margin-left: 1rem;
 
-    font-weight: 500;
+    font-family: "Avenir Next Demi";
     color: $white;
     opacity: 100%;
   }
@@ -147,31 +149,34 @@
   }
 
   &__quote {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: 0rem;
 
     font-size: 14px;
-    font-weight: 500;
+    font-family: "Avenir Next Demi";
   }
 
   &__quote2 {
+    margin: 0 1rem;
     margin-top: 1rem;
-    margin-left: 1rem;
 
     font-size: 14px;
-    font-weight: 600;
+    font-family: "Avenir Next Demi";
   }
 
   &__content {
-    margin: 0.5rem 1rem;
+    margin: 0rem 1rem;
+    margin-bottom: 1rem;
+
+    font-size: 13px;
   }
 
   &__content-title {
     margin: 1rem;
 
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 14px;
+    font-family: "Avenir Next Demi";
   }
 
   @include tablet {
@@ -201,6 +206,10 @@
     &__quote2 {
       margin-left: 5rem;
       margin-bottom: 3rem;
+    }
+
+    &__content-title {
+      font-size: 24px;
     }
 
     &__content {
@@ -236,16 +245,22 @@
     }
 
     &__quote {
-      width: 50%;
+      width: 56%;
       margin-left: 12rem;
     }
 
     &__quote2 {
       margin-left: 12rem;
+
+      font-size: 14px;
     }
 
     &__content-title {
       margin-left: 12rem;
+    }
+
+    &__content {
+      font-size: 14px;
     }
 
     &__container {
@@ -264,7 +279,7 @@
 
   &__title {
     @include title-mobile;
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-left: 1rem;
   }
 
@@ -291,6 +306,7 @@
     &__title {
       @include title-tablet;
       margin-left: 2rem;
+      margin-top: 2rem;
     }
 
     &__container {
@@ -313,6 +329,7 @@
       @include title-desktop;
       margin-left: 6rem;
       margin-bottom: 2rem;
+      margin-top: 3rem;
     }
   }
 }
@@ -323,6 +340,8 @@
   &__title {
     margin-top: 1rem;
     margin-left: 1rem;
+
+    font-family: "Avenir Next Demi";
   }
 
   &__content {
@@ -435,7 +454,7 @@
   }
 
   &__name {
-    font-weight: 600;
+    font-family: "Avenir Next Demi";
     font-size: 14px;
   }
 
@@ -451,10 +470,12 @@
 
   &__like-button {
     @include like-delete-button;
+    @include button-zoom;
   }
 
   &__delete-button {
     @include like-delete-button;
+    @include button-zoom;
   }
 
   @include tablet {
@@ -478,7 +499,7 @@
     }
 
     &__conversation {
-      padding: 0 4rem;
+      padding: 0 5.75rem;
     }
 
     &__form {
@@ -492,7 +513,7 @@
     }
 
     &__para {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     @include desktop {
@@ -530,8 +551,8 @@
   &__title {
     margin: 1rem;
 
-    font-size: 32px;
-    font-weight: 500;
+    font-size: 24px;
+    font-family: "Avenir Next Demi";
 
     color: $white;
   }
@@ -555,16 +576,15 @@
   &__info-title {
     margin: 1rem;
 
-    font-weight: 400;
-
+    font-size: 11px;
     color: $white;
+    font-family: "Avenir Next Demi";
   }
 
   &__info-content {
     margin: 1rem;
 
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 11px;
     text-decoration: none;
     color: #ffffff;
   }
@@ -573,7 +593,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    padding-left: 1rem;
+    padding-left: 1.5rem;
 
     &__top {
       display: flex;
@@ -584,6 +604,7 @@
 
     &__title {
       margin: 2rem 1rem;
+      font-size: 32px;
     }
 
     &__social-watermark-bottom {
@@ -614,7 +635,10 @@
       margin: 0;
 
       font-size: 14px;
-      font-weight: 600;
+    }
+
+    &__info-content {
+      font-size: 14px;
     }
   }
 

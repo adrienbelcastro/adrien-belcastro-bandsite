@@ -1,4 +1,18 @@
-@import url("../styles/partials/_font.scss");
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next Demi";
+  src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next Bold";
+  src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+}
 body {
   font-family: "Avenir Next";
 }
@@ -15,16 +29,14 @@ body {
   background-color: rgba(50, 50, 50, 0.5);
 }
 .hero__shows-album {
-  font-size: 36px;
-  font-weight: 600;
   font-size: 14px;
-  color: #ffffff;
+  color: #fafafa;
   padding: 1rem;
   padding-top: 2rem;
 }
 .hero__shows-title {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 24px;
+  font-family: "Avenir Next Demi";
   font-size: 24px;
   width: 80%;
   padding-bottom: 1rem;
@@ -38,15 +50,18 @@ body {
   .hero__shows-album {
     font-size: 36px;
     padding-left: 3rem;
+    padding-top: 3rem;
   }
   .hero__shows-title {
     width: 80%;
     padding-left: 3rem;
+    padding-bottom: 3rem;
     font-size: 60px;
   }
   .hero__shows-soundcloud {
     width: 70%;
     padding-left: 3rem;
+    padding-bottom: 3rem;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1280px) {
@@ -70,6 +85,7 @@ body {
 }
 
 .shows__title {
+  font-family: "Avenir Next Demi";
   margin: 1.5rem 1rem;
   font: 24px;
 }
@@ -88,24 +104,29 @@ body {
 .shows__content-subhead {
   padding-bottom: 0.5rem;
   color: #e1e1e1;
-  font-weight: 400;
+  font-size: 14px;
 }
 .shows__date {
   color: #323232;
   font-size: 14px;
-  font-weight: 600;
+  font-family: "Avenir Next Demi";
 }
 .shows__button {
   width: 90%;
   height: 40px;
   margin: 0 1rem;
   margin-bottom: 1rem;
+  font-family: "Avenir Next Demi";
   height: 40px;
   background-color: #323232;
   color: #ffffff;
   border-radius: 4px;
 }
 @media screen and (min-width: 768px) {
+  .shows {
+    margin: 0 1rem;
+    margin-bottom: 2rem;
+  }
   .shows__list {
     display: flex;
     flex-direction: none;
@@ -117,11 +138,12 @@ body {
   }
   .shows__button {
     width: 150px;
-    margin: 0;
+    margin: 1rem 0;
   }
   .shows__content-container {
     width: 25%;
     padding: 0 1rem;
+    margin-bottom: 1rem;
   }
   .shows__content-subhead {
     margin-top: -2rem;
@@ -138,6 +160,7 @@ body {
   }
   .shows__title {
     margin: 1.5rem 1rem;
+    font-size: 36px;
   }
   .shows__container {
     width: 70%;

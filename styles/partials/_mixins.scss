@@ -9,43 +9,43 @@
 //Text Styles//
 @mixin page {
   font-size: 60px;
-  font-weight: 700;
+  font-family: "Avenir Next Bold";
 }
 
 @mixin section {
   font-size: 36px;
-  font-weight: 700;
+  font-family: "Avenir Next Bold";
 }
 
 @mixin subheader {
   font-size: 24px;
-  font-weight: 600;
+  font-family: "Avenir Next Demi";
 }
 
 @mixin content {
   font-size: 14px;
-  font-weight: 400;
+  font-family: "Avenir Next Regular";
 }
 
 @mixin buttons {
   font-size: 12px;
-  font-weight: 700;
+  font-family: "Avenir Next Bold";
 }
 
 //Title Styles//
 @mixin title-mobile {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 24px;
+  font-family: "Avenir Next Demi";
 }
 
 @mixin title-tablet {
   font-size: 36px;
-  font-weight: 600;
+  font-family: "Avenir Next Demi";
 }
 
 @mixin title-desktop {
   font-size: 36px;
-  font-weight: 600;
+  font-family: "Avenir Next Demi";
 }
 
 //Image Style//
@@ -130,5 +130,11 @@
 
 @mixin like-delete-button {
   border: 0;
-  background-color: white;
+  background-color: transparent;
+}
+
+@mixin button-zoom {
+  &:hover {
+    transform: scale(1.25);
+  }
 }
