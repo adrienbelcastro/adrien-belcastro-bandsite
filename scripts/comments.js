@@ -97,35 +97,33 @@ function handleFormComment(event) {
   let name = event.target.names.value;
   let comment = event.target.comment.value;
 
-  const postComments = axios
-    .post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`, {
-      name: name,
-      comment: comment,
-    })
-    .then((result) => {
-      console.log(result);
-
-      getComments();
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-
   if (name.length >= 3 && comment.length >= 3) {
-    // nameField.classList.remove(".comment__form-name--invalid");
-    // commentField.classList.remove(".comment__form-comment--invalid");
-    // renderComments();
-    // } else {
-    //   nameField.classList.add(".comment__form-name--invalid");
-    //   commentField.classList.add(".comment__form-comment--invalid");
-    //   alert("Invalid form values");
+    nameField.classList.remove(".comment__form-name--invalid");
+    commentField.classList.remove(".comment__form-comment--invalid");
+    const postComments = axios
+      .post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`, {
+        name: name,
+        comment: comment,
+      })
+      .then((result) => {
+        console.log(result);
+
+        getComments();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  } else {
+    nameField.classList.add(".comment__form-name--invalid");
+    commentField.classList.add(".comment__form-comment--invalid");
+    alert("At least 3 characters required for name");
   }
 
   formEl.reset();
 }
 
+// function to handle the like button
 let handleLikes = (event) => {
-  // event.preventDefault();
   let likeID = event.target.id;
   console.log(likeID);
 
