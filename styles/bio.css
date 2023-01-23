@@ -13,6 +13,14 @@
   src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
   font-weight: 700;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #323232;
+  font-family: "Avenir Next Regular";
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
