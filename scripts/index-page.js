@@ -1,7 +1,8 @@
 function createComment(comment) {
   const timeStamp = comment.timestamp;
   const date = new Date(timeStamp);
-  const dateFormat = date.toLocaleDateString();
+  const format = { year: "numeric", month: "2-digit", day: "2-digit" };
+  const dateFormat = date.toLocaleDateString("en-US", format);
 
   const commentEl = document.createElement("article");
   commentEl.classList.add("comment__posted");
