@@ -1,10 +1,7 @@
 @import "partials/mixins";
 @import "partials/variables.scss";
 @import "partials/_font";
-
-body {
-  font-family: "Avenir Next";
-}
+@import "partials/global";
 
 .hero__shows {
   @include heroimage(

@@ -1,11 +1,18 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: #323232;
-  font-family: "Avenir Next";
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
 }
-
+@font-face {
+  font-family: "Avenir Next Demi";
+  src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next Bold";
+  src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -21,7 +28,6 @@
 }
 .navbar__title {
   color: #ffffff;
-  font-weight: 300;
 }
 .navbar__links {
   display: flex;
@@ -106,7 +112,7 @@
 .hero__title {
   position: absolute;
   margin-left: 1rem;
-  font-weight: 500;
+  font-family: "Avenir Next Demi";
   color: #ffffff;
   opacity: 100%;
 }
@@ -133,8 +139,8 @@
   justify-content: none;
 }
 .about-musician__title {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 24px;
+  font-family: "Avenir Next Demi";
   margin-top: 1.25rem;
   margin-left: 1rem;
 }
@@ -146,30 +152,32 @@
   background-position: center;
 }
 .about-musician__quote {
-  margin-top: 0.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  font-size: 14px;
-  font-weight: 500;
-}
-.about-musician__quote2 {
   margin-top: 1rem;
   margin-left: 1rem;
+  margin-right: 0rem;
   font-size: 14px;
-  font-weight: 600;
+  font-family: "Avenir Next Demi";
+}
+.about-musician__quote2 {
+  margin: 0 1rem;
+  margin-top: 1rem;
+  font-size: 14px;
+  font-family: "Avenir Next Demi";
 }
 .about-musician__content {
-  margin: 0.5rem 1rem;
+  margin: 0rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 13px;
 }
 .about-musician__content-title {
   margin: 1rem;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 14px;
+  font-family: "Avenir Next Demi";
 }
 @media screen and (min-width: 768px) {
   .about-musician__title {
     font-size: 36px;
-    font-weight: 600;
+    font-family: "Avenir Next Demi";
     margin-bottom: 1.5rem;
     margin-top: 2rem;
     margin-left: 2rem;
@@ -189,6 +197,9 @@
   .about-musician__quote2 {
     margin-left: 5rem;
     margin-bottom: 3rem;
+  }
+  .about-musician__content-title {
+    font-size: 24px;
   }
   .about-musician__content {
     margin: 0rem 1rem;
@@ -210,7 +221,7 @@
   }
   .about-musician__title {
     font-size: 36px;
-    font-weight: 600;
+    font-family: "Avenir Next Demi";
     margin-left: 8rem;
     margin-bottom: 2rem;
   }
@@ -218,14 +229,18 @@
     width: 70%;
   }
   .about-musician__quote {
-    width: 50%;
+    width: 56%;
     margin-left: 12rem;
   }
   .about-musician__quote2 {
     margin-left: 12rem;
+    font-size: 14px;
   }
   .about-musician__content-title {
     margin-left: 12rem;
+  }
+  .about-musician__content {
+    font-size: 14px;
   }
   .about-musician__container {
     width: 75%;
@@ -240,9 +255,9 @@
   background-color: #e1e1e1;
 }
 .photo-gallery__title {
-  font-size: 36px;
-  font-weight: 600;
-  margin-top: 3rem;
+  font-size: 24px;
+  font-family: "Avenir Next Demi";
+  margin-top: 1rem;
   margin-left: 1rem;
 }
 .photo-gallery__container {
@@ -264,8 +279,9 @@
   }
   .photo-gallery__title {
     font-size: 36px;
-    font-weight: 600;
+    font-family: "Avenir Next Demi";
     margin-left: 2rem;
+    margin-top: 2rem;
   }
   .photo-gallery__container {
     display: flex;
@@ -282,9 +298,10 @@
 @media screen and (min-width: 1280px) {
   .photo-gallery__title {
     font-size: 36px;
-    font-weight: 600;
+    font-family: "Avenir Next Demi";
     margin-left: 6rem;
     margin-bottom: 2rem;
+    margin-top: 3rem;
   }
 }
 
@@ -294,6 +311,7 @@
 .comment__title {
   margin-top: 1rem;
   margin-left: 1rem;
+  font-family: "Avenir Next Demi";
 }
 .comment__content {
   display: flex;
@@ -398,7 +416,7 @@
   margin-bottom: 1rem;
 }
 .comment__name {
-  font-weight: 600;
+  font-family: "Avenir Next Demi";
   font-size: 14px;
 }
 .comment__para {
@@ -414,16 +432,22 @@
 }
 .comment__like-button {
   border: 0;
-  background-color: white;
+  background-color: transparent;
+}
+.comment__like-button:hover {
+  transform: scale(1.25);
 }
 .comment__delete-button {
   border: 0;
-  background-color: white;
+  background-color: transparent;
+}
+.comment__delete-button:hover {
+  transform: scale(1.25);
 }
 @media screen and (min-width: 768px) {
   .comment__title {
     font-size: 36px;
-    font-weight: 600;
+    font-family: "Avenir Next Demi";
   }
   .comment__content {
     margin: 0 4rem;
@@ -438,7 +462,7 @@
     width: 48px;
   }
   .comment__conversation {
-    padding: 0 4rem;
+    padding: 0 5.75rem;
   }
   .comment__form {
     margin-right: 0;
@@ -448,13 +472,13 @@
     width: 150px;
   }
   .comment__para {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1280px) {
   .comment__title {
     font-size: 36px;
-    font-weight: 600;
+    font-family: "Avenir Next Demi";
     margin-top: 3rem;
     margin-left: 6rem;
   }
@@ -480,8 +504,8 @@
 }
 .contact__title {
   margin: 1rem;
-  font-size: 32px;
-  font-weight: 500;
+  font-size: 24px;
+  font-family: "Avenir Next Demi";
   color: #ffffff;
 }
 .contact__social-watermark-bottom {
@@ -498,13 +522,13 @@
 }
 .contact__info-title {
   margin: 1rem;
-  font-weight: 400;
+  font-size: 11px;
   color: #ffffff;
+  font-family: "Avenir Next Demi";
 }
 .contact__info-content {
   margin: 1rem;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 11px;
   text-decoration: none;
   color: #ffffff;
 }
@@ -512,7 +536,7 @@
   .contact {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
   }
   .contact__top {
     display: flex;
@@ -521,6 +545,7 @@
   }
   .contact__title {
     margin: 2rem 1rem;
+    font-size: 32px;
   }
   .contact__social-watermark-bottom {
     display: none;
@@ -545,7 +570,9 @@
   .contact__info-title {
     margin: 0;
     font-size: 14px;
-    font-weight: 600;
+  }
+  .contact__info-content {
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 1280px) {
